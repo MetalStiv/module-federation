@@ -37,14 +37,14 @@ const requestRefresh: TokenRefreshRequest = async (refreshToken: string): Promis
     }
 }
 
-applyAuthTokenInterceptor(transactionMicroservice, {
-    requestRefresh,
-    header: "Authorization",
-    headerPrefix: "Bearer "
-})
+// applyAuthTokenInterceptor(transactionMicroservice, {
+//     requestRefresh,
+//     header: "Authorization",
+//     headerPrefix: "Bearer "
+// })
 
-applyAuthTokenInterceptor(userMicroservice, {
-    requestRefresh,
-    header: "Authorization",
-    headerPrefix: "Bearer "
-})
+// applyAuthTokenInterceptor(userMicroservice, {
+//     requestRefresh,
+//     header: "Authorization",
+//     headerPrefix: "Bearer "
+// })

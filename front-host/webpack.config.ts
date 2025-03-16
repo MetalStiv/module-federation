@@ -12,8 +12,8 @@ export default (env: Environment) => {
         port: env.port ?? 3000,
         mode: env.mode,
         paths: {
-            entry: path.resolve(__dirname, 'front-host/src', 'index.tsx'),
-            html: path.resolve(__dirname, 'front-host/public', 'index.html'),
+            entry: path.resolve(__dirname, 'src', 'index.tsx'),
+            html: path.resolve(__dirname, 'public', 'index.html'),
             output: path.resolve(__dirname, 'build'),
         }
     })
