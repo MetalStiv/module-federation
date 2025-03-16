@@ -4,7 +4,7 @@ import style from './styles.module.css';
 import { LoginForm } from "./login-form/login-form";
 import { RegisterForm } from "./register-form/register-form";
 
-export const StartPage = () => {
+const StartPage = () => {
     return (
         <Container fluid className={style.container}>
             <Row>
@@ -24,3 +24,5 @@ export const StartPage = () => {
         </Container>
     )
 }
+
+export default StartPage;

@@ -7,7 +7,7 @@ import ConfirmationDialog from "../../components/confirmation-dialog";
 import { rootStore } from "../../stores/root-store";
 import { observer } from "mobx-react-lite";
  
-export const TransactionsPage = observer(() => {
+const TransactionsPage = observer(() => {
     const navigate = useNavigate();
 
     if (!rootStore.userStore.isLogged){
@@ -69,3 +69,5 @@ export const TransactionsPage = observer(() => {
         </div>
     )
 })
+
+export default TransactionsPage;

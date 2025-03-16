@@ -1,5 +1,3 @@
-import { StartPage } from './pages/start-page/start-page';
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,15 +5,23 @@ import {
 } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { TransactionsPage } from './pages/transactions-page/transactions-page';
+import { LazyStartPage } from "./pages/start-page";
+import { LazyTransactionsPage } from "./pages/transactions-page";
+import { Suspense } from "react";
 
 function App() {
   return (
     <div className="App" style={{ height: '100%' }}>
       <Router>
         <Routes>
-          <Route path="/" element={<StartPage />} />
-          <Route path="/home" element={<TransactionsPage />} />
+          <Route path="/" element={
+            <Suspense fallback='Loading'>
+              <LazyStartPage />
+            </Suspense>
+          } />
+          <Route path="/home" element={<Suspense fallback='Loading'>
+              <LazyTransactionsPage />
+            </Suspense>} />
         </Routes>
       </Router>
     </div>

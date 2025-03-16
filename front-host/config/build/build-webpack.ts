@@ -12,6 +12,7 @@ export const buildWebpack: (options: BuildOptions) => Configuration = (options) 
         output: {
             path: options.paths.output,
             filename: '[name].[contenthash].js',
+            chunkFilename: '[name].[contenthash].chunk.js',
             clean: true,
         },
         resolve: buildResolvers(options),
@@ -20,5 +21,10 @@ export const buildWebpack: (options: BuildOptions) => Configuration = (options) 
         },
         plugins: buildPlugins(options),
         devServer: buildDevServer(options),
+        optimization: {
+            splitChunks: {
+              chunks: 'all',
+            },
+        },
     });
 };
