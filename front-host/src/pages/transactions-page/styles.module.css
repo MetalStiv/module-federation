@@ -1,0 +1,20 @@
+.table {
+    margin-top: 16px;
+    width: calc(100vw - 32px);
+}
+
+.inputTransaction {
+    background-color: green;
+}
+
+.outputTransaction {
+    background-color: red;
+}
+
+.fieldLabel {
+    margin-top: 5px;
+}
+
+.formRow {
+    margin-top: 2vh;
+}

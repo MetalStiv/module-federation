@@ -1,0 +1,12 @@
+.formRow {
+    margin-top: 2vh;
+}
+
+.fieldLabel {
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+    margin-top: 16px;
+}
