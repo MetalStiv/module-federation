@@ -21,10 +21,5 @@ export const buildWebpack: (options: BuildOptions) => Configuration = (options) 
         },
         plugins: buildPlugins(options),
         devServer: buildDevServer(options),
-        optimization: {
-            splitChunks: {
-              chunks: 'all',
-            },
-        },
     });
 };
