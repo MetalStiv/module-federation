@@ -31,6 +31,8 @@
   },
   "description": "",
   "dependencies": {
+    "@packages/build-config": "*",
+    "@packages/shared": "*",
     "axios": "^0.27.2",
     "axios-jwt": "^4.0.3",
     "bootstrap": "^5.3.3",

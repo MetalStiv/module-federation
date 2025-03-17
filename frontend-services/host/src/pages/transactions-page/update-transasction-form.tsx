@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
-import { ITransactionDto } from "../../../../shared/types/dto/transaction-dto";
+import { ITransactionDto } from "../../../../../packages/shared/src/types/dto/transaction-dto";
 import { useFormik } from "formik";
 import { updateTransactionFormScheme } from "../../constants/form-validations-schemes";
 import style from './styles.module.css';

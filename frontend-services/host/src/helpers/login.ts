@@ -1,8 +1,8 @@
 import { setAuthTokens, clearAuthTokens, getAccessToken } from "axios-jwt";
 import { userCleanMicroservice } from "../constants/axios-microservices";
-import { IJwtData } from '../../../shared/types/jwt-data';
-import { ILoginDto } from '../../../shared/types/dto/login-dto';
-import { ITokenDto } from '../../../shared/types/dto/token-dto';
+import { IJwtData } from '../../../../packages/shared/src/types/jwt-data';
+import { ILoginDto } from '../../../../packages/shared/src/types/dto/login-dto';
+import { ITokenDto } from '../../../../packages/shared/src/types/dto/token-dto';
 import jwt_decode from "jwt-decode";
 
 export const login = async (params: ILoginDto, loginHandler: () => void): Promise<IJwtData> => {

@@ -1,6 +1,5 @@
 import path from "path";
-import { buildWebpack } from "./config/build/build-webpack";
-import { BuildMode } from "./config/build/types/types";
+import {BuildMode, buildWebpack} from '@packages/build-config'
 
 type Environment = {
     mode: BuildMode,
