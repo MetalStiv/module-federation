@@ -1,10 +1,10 @@
 import { Router, Response } from 'express';
 import { JWT_EXPIRES, privateKey, userCollection } from '../app';
 import { sign, decode } from 'jsonwebtoken';
-import { getRandomStr } from '../../../shared/utils/get-random-str'; 
-import { ILoginDto } from '../../../shared/types/dto/login-dto';
-import { ITokenDto } from '../../../shared/types/dto/token-dto';
-import { IJwtData } from '../../../shared/types/jwt-data';
+import { getRandomStr } from '../../../../common/shared/src/utils/get-random-str'; 
+import { ILoginDto } from '../../../../common/shared/src/types/dto/login-dto';
+import { ITokenDto } from '../../../../common/shared/src/types/dto/token-dto';
+import { IJwtData } from '../../../../common/shared/src/types/jwt-data';
 import { ObjectId } from 'mongodb';
 import { IUser } from '../model/user';
 import { createHash } from 'crypto';

@@ -1,5 +1,5 @@
 {
-  "name": "transaction-microservice",
+  "name": "user-microservice",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -20,6 +20,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@module-federation/shared": "1.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "4.21.2",

@@ -19,7 +19,9 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo-db:27017/
 
   user-microservice:
-    image: user_microservice:1.0
+    build:
+      context: .
+      dockerfile: package/backend-services/user_microservice/dockerfile
     restart: always
     ports:
       - 3015:3015
@@ -32,7 +34,10 @@ services:
       PORT: 3015
     
   transaction-microservice:
-    image: transaction_microservice:1.0
+    build:
+      context: .
+      dockerfile: package/backend-services/transaction_microservice/dockerfile
+    # image: transaction_microservice:1.0
     restart: always
     ports:
       - 3016:3016
@@ -48,7 +53,7 @@ services:
   nginx-front:
     image: nginx:1.21.6
     volumes:
-      - ./front-host/build:/usr/share/nginx/html
+      - ./packages/frontend-services/host/build:/usr/share/nginx/html
     ports:
       - 89:80
     environment:

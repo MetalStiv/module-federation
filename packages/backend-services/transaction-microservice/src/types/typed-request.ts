@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { IJwtData } from '../../../shared/types/jwt-data';
+import { IJwtData } from '@packages/shared/src/types/jwt-data';
 
 export type RequestWithDecodedToken = Request & { user?: IJwtData };
 

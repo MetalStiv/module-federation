@@ -1,5 +1,5 @@
 {
-    "name": "@packages/build-config",
+    "name": "@module-federation/front-build-config",
     "version": "1.0.0",
     "main": "./src/index.ts",
     "devDependencies": {

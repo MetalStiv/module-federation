@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { ITransactionDto } from "../../../../packages/shared/src/types/dto/transaction-dto";
+import { ITransactionDto } from "../../../../shared/src/types/dto/transaction-dto";
 import { transactionMicroservice } from "../constants/axios-microservices";
 
 const cacheTimestamp = Symbol("cacheTimestamp");

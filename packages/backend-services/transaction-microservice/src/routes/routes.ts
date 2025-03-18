@@ -1,6 +1,6 @@
 import { Router, Response } from 'express';
-import { ITransactionDto } from '../../../shared/types/dto/transaction-dto';
-import { IIdDto } from '../../../shared/types/dto/id-dto';
+import { ITransactionDto } from '@packages/shared/src/types/dto/transaction-dto';
+import { IIdDto } from '@packages/shared/src/types/dto/id-dto';
 import { ITypedRequestBodyWithDecodedToken, RequestWithDecodedToken } from '../types/typed-request';
 import { transactionCollection } from '../app';
 import { ITransaction } from '../model/transaction';
