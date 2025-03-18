@@ -31,6 +31,8 @@
   },
   "description": "",
   "dependencies": {
+    "@mudule-federation/build-config": "*",
+    "@mudule-federation/shared": "*",
     "axios": "^0.27.2",
     "axios-jwt": "^4.0.3",
     "bootstrap": "^5.3.3",
@@ -40,7 +42,6 @@
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",
-    "react-refresh": "^0.16.0",
     "react-router-dom": "^7.1.1",
     "yup": "^1.6.1"
   }

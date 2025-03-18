@@ -2,12 +2,9 @@
     "name": "module-federation",
     "version": "1.0.0",
     "workspaces": [
-        "packages/backend-services",
-        "packages/frontend-services",
+        "packages/backend-services/*",
+        "packages/frontend-services/*",
         "packages/front-build-config",
         "packages/shared"
-    ],
-    "dependencies": {
-        "mongodb": "^5.2.0"
-    }
+    ]
 }
