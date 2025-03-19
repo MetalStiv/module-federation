@@ -30,7 +30,10 @@ const requestRefresh: TokenRefreshRequest = async (refreshToken: string): Promis
         refresh: refreshToken, 
         access: getAccessToken() 
     })
-  
+
+    localStorage.setItem('refresh', 'refresh_token');
+    localStorage.setItem('access', 'access_token');
+
     return {
         accessToken: response.data.access,
         refreshToken: response.data.refresh

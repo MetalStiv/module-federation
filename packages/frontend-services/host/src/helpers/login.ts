@@ -16,6 +16,9 @@ export const login = async (params: ILoginDto, loginHandler: () => void): Promis
     refreshToken: response.data.refresh
   })
 
+  localStorage.setItem('refresh', response.data.refresh);
+  localStorage.setItem('access', response.data.access);
+
   loginHandler()
 
   return jwt_decode(response.data.access);;

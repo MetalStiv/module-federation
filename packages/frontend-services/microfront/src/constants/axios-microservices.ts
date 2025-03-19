@@ -14,7 +14,10 @@ export const userCleanMicroservice = axios.create({
 export const userMicroservice = axios.create({
     baseURL: USER_BASE_URL,
     timeout: 2000,
-    headers: {"Access-Control-Allow-Origin": "*"},
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Authorization": `Bearer ${localStorage.getItem('access') || ''}` 
+    },
     validateStatus: () => true
 });
 
@@ -29,7 +32,10 @@ const requestRefresh: TokenRefreshRequest = async (refreshToken: string): Promis
     const response = await userMicroservice.post(`refreshToken`, { 
         refresh: refreshToken, 
         access: getAccessToken() 
-    })
+    });
+
+    localStorage.setItem('refresh', response.data.refresh);
+    localStorage.setItem('access', response.data.access);
   
     return {
         accessToken: response.data.access,
