@@ -1,11 +1,16 @@
+import { lazy, Suspense } from "react";
 import { Header } from "./header";
+
+const RemoteApp = lazy(() => import("microfront/App"));
  
 const TransactionsPage = () => {
     return (
         <div style={{margin: 16}}>
             <Header />
 
-            <div>Microfornt</div>
+            <Suspense fallback="Loading Remote App...">
+                <RemoteApp />
+            </Suspense>
         </div>
     )
 }

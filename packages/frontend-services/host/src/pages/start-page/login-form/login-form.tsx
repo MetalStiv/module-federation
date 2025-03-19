@@ -20,21 +20,22 @@ export const LoginForm = observer(() => {
             password: ''
           },
           onSubmit: async (values) => {
-            setIsInvalidUserError(false);
-            setIsPasswordError(false);
-            try{
-                await login(values, () => rootStore.userStore.setLoginStatus(true));
+            // setIsInvalidUserError(false);
+            // setIsPasswordError(false);
+            // try{
+            //     await login(values, () => rootStore.userStore.setLoginStatus(true));
                 
-                navigate('/home');
-            }
-            catch(errorCode){
-                if (errorCode === 520){
-                    setIsInvalidUserError(true)
-                }
-                if (errorCode === 521){
-                    setIsPasswordError(true)
-                }
-            }
+            //     navigate('/home');
+            // }
+            // catch(errorCode){
+            //     if (errorCode === 520){
+            //         setIsInvalidUserError(true)
+            //     }
+            //     if (errorCode === 521){
+            //         setIsPasswordError(true)
+            //     }
+            // }
+            navigate('/home');
         },
         validationSchema: loginFormScheme
     });
