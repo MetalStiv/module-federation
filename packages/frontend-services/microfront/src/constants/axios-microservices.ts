@@ -24,7 +24,10 @@ export const userMicroservice = axios.create({
 export const transactionMicroservice = axios.create({
     baseURL: TRANSACTION_BASE_URL,
     timeout: 2000,
-    headers: {"Access-Control-Allow-Origin": "*"},
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Authorization": `Bearer ${localStorage.getItem('access') || ''}` 
+    },
     validateStatus: () => true
 });
 
